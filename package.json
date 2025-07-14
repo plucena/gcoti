@@ -1,0 +1,42 @@
+{
+  "name": "simple-boolean-storage",
+  "version": "1.0.0",
+  "description": "COTI MPC SimpleBooleanStorage smart contract with privacy-preserving boolean storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "compile:gcoti": "hardhat run scripts/compile-gcoti.js",
+    "extract:gcoti": "node scripts/extract-gcoti-abi.js",
+    "deploy:gcoti": "hardhat run scripts/deploy-gcoti.js",
+    "deploy:gcoti:testnet": "hardhat run scripts/deploy-gcoti.js --network cotiTestnet",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network cotiTestnet",
+    "coverage": "hardhat coverage",
+    "gas-report": "REPORT_GAS=true hardhat test"
+  },
+  "keywords": [
+    "coti",
+    "mpc",
+    "privacy",
+    "blockchain",
+    "ethereum",
+    "solidity"
+  ],
+  "author": "COTI Developer",
+  "license": "MIT",
+  "dependencies": {
+    "@coti-io/coti-contracts": "^1.1.0",
+    "@coti-io/coti-ethers": "^1.0.0",
+    "@coti-io/coti-sdk-typescript": "^1.0.0",
+    "@openzeppelin/contracts": "^4.9.6"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.0",
+    "ethers": "^6.0.0",
+    "hardhat": "^2.24.3"
+  }
+}
